@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ThreatSentinel GUI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>ThreatSentinel Web Application</h1>
+    <p>   You must provide 1 network traffic dataset and 1 source code dataset. Please select the datasets:</p>
+    <form id="datasetForm">
+      <label for="networkDataset">Network Traffic Dataset:</label>
+      <select id="networkDataset" required>
+        <option value="awid_full_dataset1.zip">ThreatSentinel Network Traffic Dataset</option>
+        <!-- Add more network datasets here if needed -->
+      </select>
+
+      <label for="codeGadgetDataset">Software Source Code Dataset:</label>
+      <select id="codeGadgetDataset" required>
+        <option value="cwe119_cgd_dataset.txt">ThreatSentinel Software Source Code Dataset</option>
+        <!-- Add more code gadget datasets here if needed -->
+      </select>
+
+      <!-- Update the type attribute to "button" and remove the onclick attribute -->
+      <input type="button" value="Submit" id="submitBtn">
+      <p>Want to run ThreatSentinel on more datasets or other datasets? Open up the ThreatSentinel source code and replace the testing datasets with your own datasets.</p>
+    </form>
+    <div id="outputContainer">
+      <!-- The application's output will be displayed here -->
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
